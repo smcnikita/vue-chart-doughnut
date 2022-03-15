@@ -16,6 +16,7 @@ export default {
 			required: false,
 			default: '#e1e1e1',
 		},
+		/** text size in px (default: 32px) */
 		textSize: {
 			type: String,
 			required: false,
@@ -64,12 +65,12 @@ export default {
 </script>
 
 <template>
-	<div class="chart-wrapper d-flex justify-content-center">
-		<div class="donut-chart chart" ref="donutChart">
-			<div class="slice one" ref="sliceOne"></div>
-			<div class="slice two" ref="sliceTwo"></div>
-			<div class="chart-center" ref="chartCenter">
-				<span class="chart-title" ref="perTitle"></span>
+	<div class="chart__wrapper">
+		<div class="donut__chart" ref="donutChart">
+			<div class="donut__slice slice__one" ref="sliceOne"></div>
+			<div class="donut__slice slice__two" ref="sliceTwo"></div>
+			<div class="chart__center" ref="chartCenter">
+				<span class="chart__title" ref="perTitle"></span>
 			</div>
 		</div>
 	</div>
@@ -82,68 +83,53 @@ $size: 148px;
 $sizeHalf: math.div($size, 2);
 $width: 22px;
 
-.chart-wrapper {
+.chart__wrapper {
 	float: left;
 	background: #fff;
-	padding: 20px;
-	width: 100%;
 }
 
-// Donut Chart Mixin
-.donut-chart {
+.donut__chart {
+	width: $size;
+	height: $size;
 	position: relative;
 	border-radius: 50%;
 	overflow: hidden;
 
-	.slice {
+	.donut__slice {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
+
+		&.slice__one {
+			clip: rect(0 $size $sizeHalf 0);
+		}
+
+		&.slice__two {
+			clip: rect(0 $sizeHalf $size 0);
+		}
 	}
 
-	.chart-center {
+	.chart__center {
 		position: absolute;
 		border-radius: 50%;
+		top: $width;
+		left: $width;
+		width: $size - ($width * 2);
+		height: $size - ($width * 2);
 
 		span {
 			display: block;
 			text-align: center;
 			font-weight: bold;
+			line-height: $size - ($width * 2);
 		}
 	}
 }
 
-.donut-chart {
-	&.chart {
-		width: $size;
-		height: $size;
-
-		.slice {
-			&.one {
-				clip: rect(0 $size $sizeHalf 0);
-			}
-
-			&.two {
-				clip: rect(0 $sizeHalf $size 0);
-			}
-		}
-
-		.chart-center {
-			top: $width;
-			left: $width;
-			width: $size - ($width * 2);
-			height: $size - ($width * 2);
-
-			span {
-				line-height: $size - ($width * 2);
-			}
-		}
-	}
-}
-
-.chart-title {
+.chart__title {
 	user-select: none;
+	font-family: inherit;
 }
 </style>
