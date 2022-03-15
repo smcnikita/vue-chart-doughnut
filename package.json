@@ -1,0 +1,39 @@
+{
+  "name": "vue-chart-doughnut",
+  "version": "0.1.0",
+  "description": "Doughnut Chart for vue.js 3",
+  "author": "smcnikita (https://github.com/smcnikita)",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue3",
+    "doughnut",
+    "chart"
+  ],
+  "main": "src/ChartDoughnut.vue",
+  "files": [
+    "dist/*",
+    "src/**/*.vue"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smcnikita/vue-chart-doughnut.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smcnikita/vue-chart-doughnut/issues"
+  },
+  "homepage": "https://github.com/smcnikita/vue-chart-doughnut#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050"
+  },
+  "dependencies": {
+    "vue": "^3.2.31"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.2",
+    "sass": "^1.49.9",
+    "vite": "^2.8.4"
+  }
+}
