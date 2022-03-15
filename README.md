@@ -2,6 +2,10 @@
 
 Simple doughnut chart for vue.js 3
 
+### Demo
+
+[Codesandbox](https://codesandbox.io/s/vue-chart-doughnut-d668sx)
+
 ![doughnut chart preview](./src/assets/img/for-readme/01.png)
 
 ## Installation and Usage
