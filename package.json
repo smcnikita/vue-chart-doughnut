@@ -1,6 +1,6 @@
 {
   "name": "vue-chart-doughnut",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Doughnut Chart for vue.js 3",
   "author": "smcnikita (https://github.com/smcnikita)",
   "license": "MIT",
