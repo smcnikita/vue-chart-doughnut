@@ -8,7 +8,7 @@ npm i -D vue-chart-doughnut
 ```
 #### Import into a single component.
 ```js
-import ChartDoughnut from 'vue-chart-doughnut';
+import ChartDoughnut from 'vue-chart-doughnut/src/components/ChartDoughnut';
 ```
 
 ## Project Setup
