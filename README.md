@@ -10,11 +10,11 @@ Simple doughnut chart for vue.js 3
 
 ## Installation and Usage
 ```sh
-npm i -D vue-chart-doughnut
+npm i vue-chart-doughnut
 ```
 #### Import into a single component.
 ```js
-import ChartDoughnut from 'vue-chart-doughnut/src/components/ChartDoughnut';
+import ChartDoughnut from 'vue-chart-doughnut';
 ```
 ```vue
 <template>

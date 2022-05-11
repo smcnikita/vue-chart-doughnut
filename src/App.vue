@@ -3,19 +3,25 @@ import ChartDoughnut from './components/ChartDoughnut.vue';
 </script>
 
 <template>
-	<div class="wrapper">
-		<ChartDoughnut class="p-3" per="5" color="#C3AED6" color-bg="#CDC9C3" text-size="40" />
-		<ChartDoughnut class="p-3" per="85" />
-		<ChartDoughnut class="p-3" per="100" />
-	</div>
+  <div class="wrapper">
+    <chart-doughnut
+      class="p-3"
+      per="5"
+      color="#C3AED6"
+      color-bg="#CDC9C3"
+      text-size="40"
+    />
+    <chart-doughnut class="p-3" per="85" />
+    <chart-doughnut class="p-3" per="100" />
+  </div>
 </template>
 
-<style lang="scss">
+<style>
 .wrapper {
-	display: flex;
+  display: flex;
 }
 
 .p-3 {
-	padding: 1rem;
+  padding: 1rem;
 }
 </style>
